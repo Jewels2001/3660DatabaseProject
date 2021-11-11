@@ -1,2 +1,16 @@
 /* CSS Document */
 
+body
+{
+	background-color: black;
+}
+
+h1
+{
+	color: aqua;
+}
+
+p
+{
+	color: white;
+}
