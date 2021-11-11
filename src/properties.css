@@ -7,10 +7,25 @@ body
 
 h1
 {
-	color: aqua;
+	color: indianred;
 }
 
 p
 {
 	color: white;
+}
+
+li
+{
+	color: white;
+}
+
+a:link
+{
+	color: green;
+}
+
+a:visited
+{
+	color: hotpink;
 }
