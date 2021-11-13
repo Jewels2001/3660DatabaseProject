@@ -4,7 +4,7 @@
 //$password = $_COOKIE["password"];
 
 $conn = new mysqli("vconroy.cs.uleth.ca","walw3660","eeb5SaiZuw","walw3660");
-$sql = "update ACTIVITY set Aname='$_POST[Aname]',length='$_POST[length]',startTime='$_POST[startTime]',date='$_POST[Adate]' where Aname='$_POST[oldname]'"; 
+$sql = "update ACTIVITY set Aname='$_POST[Aname]',length='$_POST[length]',startTime='$_POST[startTime]',Adate='$_POST[Adate]' where Aname='$_POST[oldname]'"; 
 if($conn->query($sql)) 
 { 
 	echo "<h3> Activity updated!</h3>";
