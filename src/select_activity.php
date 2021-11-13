@@ -7,13 +7,13 @@
 
 <body>
   <?php
-  if(isset($_COOKIE["username"])){
+  // if(isset($_COOKIE["username"])){
     echo "<form action=\"selectactivity.php\" method=post>";
 
-    $username = $_COOKIE["username"];
-    $password = $_COOKIE["password"];
+    // $username = $_COOKIE["username"];
+    // $password = $_COOKIE["password"];
 
-    $conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
+    $conn = new mysqli("vconroy.cs.uleth.ca","walw3660","eeb5SaiZuw","walw3660");
     if($conn->connect_errno)
     {
        echo "Error connecting!";
@@ -34,9 +34,10 @@
        echo "<p>There are no Activities in the system!</p>";
     }
     echo "</form>";
-  } else {
-    echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";
   }
+  // } else {
+  //   echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";
+  // }
   ?>
 </body>
 </html>
