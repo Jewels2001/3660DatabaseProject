@@ -5,14 +5,14 @@ html>
 
 
 <?php
-if(isset($_COOKIE["username"])){
+//if(isset($_COOKIE["username"])){
 
 echo "<form action=\"updateactivity.php\" method=post>";
 
-	$username = $_COOKIE["username"];
-	$password = $_COOKIE["password"];	
+	//$username = $_COOKIE["username"];
+	//$password = $_COOKIE["password"];	
 
-	$conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
+	$conn = new mysqli("vconroy.cs.uleth.ca","walw3660","eeb5SaiZuw","walw3660");
 	if($conn->connect_errno)
 	{
 	   echo "Connection Problem!";
@@ -49,10 +49,11 @@ echo "<form action=\"updateactivity.php\" method=post>";
    echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>"; 
 
 }
+	//Aname, date, length, startTime
 ?>
 
 
  
 </body>
 </html>
-//Aname, date, length, startTime
+
