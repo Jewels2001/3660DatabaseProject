@@ -10,7 +10,7 @@ if($mysqli->connect_errno)
    exit; 
 }
 
-$sql = "insert into Activity (Aname, Adate, length, startTime) values ('$_POST[Aname]','$_POST[Adate]','$_POST[length]','$_POST[startTime]')"; 
+$sql = "insert into ACTIVITY (Aname, Adate, length, startTime) values ('$_POST[Aname]','$_POST[Adate]','$_POST[length]','$_POST[startTime]')"; 
 if($conn->query($sql))  
 { 
     echo "<h3> Activity added!</h3>";
