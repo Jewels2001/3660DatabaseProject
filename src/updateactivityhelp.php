@@ -1,4 +1,4 @@
-html>
+<html>
 <head><title>University of Wendy</title></head>
 <body>
 
@@ -32,7 +32,7 @@ echo "<form action=\"updateactivity.php\" method=post>";
 	   $rec=$result->fetch_assoc(); 
 	   echo "Activity Name: <input type=text name=\"Aname\" value=\"$rec[Aname]\"><br><br>";
 	   echo "Activity Length: <input type=text name=\"length\" value=\"$rec[length]\"><br><br>";
-	   echo "Activity Date: <input type=text name=\"date\" value=\"$rec[date]\"><br><br>";
+	   echo "Activity Date: <input type=text name=\"date\" value=\"$rec[Adate]\"><br><br>";
      echo "Activity Start Time: <input type=text name=\"startTime\" value=\"$rec[startTime]\"><br><br>";
           
 	   echo "<input type=hidden name=\"oldname\" value=\"$_POST[Aname]\">";

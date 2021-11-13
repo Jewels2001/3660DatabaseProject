@@ -4,7 +4,7 @@
 //$password = $_COOKIE["password"];
 
 $conn = new mysqli("vconroy.cs.uleth.ca","walw3660","eeb5SaiZuw","walw3660");
-$sql = "update ACTIVITY set Aname='$_POST[Aname]',length='$_POST[length]',startTime='$_POST[startTime]',date='$_POST[date]' where Aname='$_POST[oldname]'"; 
+$sql = "update ACTIVITY set Aname='$_POST[Aname]',length='$_POST[length]',startTime='$_POST[startTime]',date='$_POST[Adate]' where Aname='$_POST[oldname]'"; 
 if($conn->query($sql)) 
 { 
 	echo "<h3> Activity updated!</h3>";
@@ -25,6 +25,6 @@ echo "<a href=\"main.php\">Return</a> to Home Page.";
 } else {
    echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>"; 
 }
-//Aname, date, length, startTime
+//Aname, Adate, length, startTime
 ?>
 
