@@ -3,7 +3,7 @@ if (isset($_COOKIE["username"])) {
 $username = $_COOKIE["username"];
 $password = $_COOKIE["password"];
 
-$conn = new mysqli("vconroy.cs.uleth.ca","walw3660","eeb5SaiZuw","walw3660");
+$conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
 $sql = "update ACTIVITY set Aname='$_POST[Aname]',length='$_POST[length]',startTime='$_POST[startTime]',Adate='$_POST[Adate]' where Aname='$_POST[oldname]'";
 if($conn->query($sql))
 {
