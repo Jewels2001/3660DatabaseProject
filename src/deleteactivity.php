@@ -5,7 +5,7 @@
 $username = $_COOKIE["username"];
 $password = $_COOKIE["password"];
 
-   $conn = new mysqli("vconroy.cs.uleth.ca","walw3660","eeb5SaiZuw","walw3660");
+   $conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
 
    $sql = "delete from ACTIVITY where Aname='$_POST[Aname]'"; 
    if($conn->query($sql)) 
