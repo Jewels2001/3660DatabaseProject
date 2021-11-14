@@ -1,4 +1,4 @@
-html>
+<html>
 <head><title>University of Wendy</title></head>
 <body>
 
@@ -12,7 +12,7 @@ echo "<form action=\"updateactivity.php\" method=post>";
 	$username = $_COOKIE["username"];
 	$password = $_COOKIE["password"];	
 
-	$conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
+	$conn = new mysqli("vconroy.cs.uleth.ca","walw3660","eeb5SaiZuw","walw3660");
 	if($conn->connect_errno)
 	{
 	   echo "Connection Problem!";
@@ -32,7 +32,7 @@ echo "<form action=\"updateactivity.php\" method=post>";
 	   $rec=$result->fetch_assoc(); 
 	   echo "Activity Name: <input type=text name=\"Aname\" value=\"$rec[Aname]\"><br><br>";
 	   echo "Activity Length: <input type=text name=\"length\" value=\"$rec[length]\"><br><br>";
-	   echo "Activity Date: <input type=text name=\"date\" value=\"$rec[date]\"><br><br>";
+	   echo "Activity Date: <input type=text name=\"date\" value=\"$rec[Adate]\"><br><br>";
      echo "Activity Start Time: <input type=text name=\"startTime\" value=\"$rec[startTime]\"><br><br>";
           
 	   echo "<input type=hidden name=\"oldname\" value=\"$_POST[Aname]\">";
@@ -49,10 +49,11 @@ echo "<form action=\"updateactivity.php\" method=post>";
    echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>"; 
 
 }
+	//Aname, date, length, startTime
 ?>
 
 
  
 </body>
 </html>
-//Aname, date, length, startTime
+

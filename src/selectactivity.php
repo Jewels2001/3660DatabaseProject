@@ -1,10 +1,10 @@
 <?php
 if(isset($_COOKIE["username"]))
 {
-  $username = $_COOKIE["username"];
-  $password = $_COOKIE["password"];
+$username = $_COOKIE["username"];
+$password = $_COOKIE["password"];
 
-  $conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
+  $conn = new mysqli("vconroy.cs.uleth.ca","walw3660","eeb5SaiZuw","walw3660");
   if($conn->connect_errno) {
     echo "Connection issues";
     exit;
@@ -29,8 +29,9 @@ if(isset($_COOKIE["username"]))
    } else {
      echo "<p>Activity name $_POST[Aname] does not exist!</p>";
    }
+ }
 } else {
-  echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";
+echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";
 }
 echo "<a href=\"main.php\">Return</a> to Home Page.";
 
