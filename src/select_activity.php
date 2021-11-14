@@ -13,7 +13,7 @@
     $username = $_COOKIE["username"];
     $password = $_COOKIE["password"];
 
-    $conn = new mysqli("vconroy.cs.uleth.ca","walw3660","eeb5SaiZuw","walw3660");
+    $conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
     if($conn->connect_errno)
     {
        echo "Error connecting!";
