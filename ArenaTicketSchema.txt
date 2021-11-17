@@ -1,10 +1,44 @@
 CREATE TABLE ACTIVITY (
-  Aname     VARCHAR(255) NOT NULL PRIMARY KEY,
-  Adate     DATE         NOT NULL,
-  startTime TIME         NOT NULL,
-  length    VARCHAR(255) NOT NULL
+  Aname     VARCHAR(255)  NOT NULL PRIMARY KEY,
+  Adate     DATE          NOT NULL,
+  startTime TIME          NOT NULL,
+  length    VARCHAR(255)  NOT NULL
 );
 
 CREATE TABLE SECTION (
+  secNumber INT           UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  secName   VARCHAR(255)  NOT NULL,
+  amountOfSeats  INT      UNSIGNED NOT NULL
+);
 
+CREATE TABLE SEATS (
+  secNumber  INT          UNSIGNED NOT NULL,
+  seatID          INT         UNSIGNED AUTO_INCREMENT NOT NULL,
+  seatNumber  INT         UNSIGNED NOT NULL,
+  price       FLOAT       DEFAULT 0.00,
+  PRIMARY KEY(secNumber, seatNumber, seatID),
+  FOREIGN KEY (secNumber) REFERENCES SECTION(secNumber),
+);
+
+CREATE TABLE TIXHOLDER (
+
+  //ID        INT           UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+
+  phoneNum  VARCHAR(10)   NOT NULL PRIMARY KEY,
+
+  Pname     VARCHAR(255)   NOT NULL,
+  dob       VARCHAR(255)  NOT NULL,
+  address   VARCHAR(255)  NOT NULL,
+  activityName VARCHAR(255) NOT NULL,
+  seatNum   INT       NOT NULL,
+  FOREIGN KEY (activityName) REFERENCES ACTIVITY(Aname),
+  FOREIGN KEY (seatNum) REFERNCES SEATS(seatNumber),
+);
+
+CREATE TABLE ATTENDS (
+  phoneNum  VARCHAR(255)  NOT NULL,
+  activityName VARCHAR(255) NOT NULL,
+  FOREIGN KEY (phoneNum) REFERENCES TIXHOLDER(phoneNum),
+  FOREIGN KEY (activityName) REFERENCES ACTIVITY(Aname),
+  PRIMARY KEY (phoneNum, activityName),
 );
