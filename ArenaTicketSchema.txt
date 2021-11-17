@@ -1,0 +1,10 @@
+CREATE TABLE ACTIVITY (
+  Aname     VARCHAR(255) NOT NULL PRIMARY KEY,
+  Adate     DATE         NOT NULL,
+  startTime TIME         NOT NULL,
+  length    VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE SECTION (
+
+);
