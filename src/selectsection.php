@@ -1,10 +1,35 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-</head>
+<?php
+  if(isset($_COOKIE["username"])) {
+    $username = $_COOKIE["username"];
+    $password = $_COOKIE["password"];
 
-<body>
-</body>
-</html>
+    $conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
+    if($mysqli->connect_errno) {
+      echo "Connection Issue!";
+      exit;
+    }
+  //echo "<p>$_POST[Aname]</p>";
+    $sql = "select * from SECTION where secNumber='$_POST[secNumber]'";
+    $result = $conn->query($sql);
+    if($result->num_rows != 0)
+    {
+      echo "<table border=1>";
+      $rec = $result->fetch_assoc();
+
+      echo "<tr>";
+      echo "<td>$rec[secNumber]</td>";
+      echo "<td>$rec[secName]</td>";
+      echo "<td>$rec[amountOfSeats]</td>";
+      echo "</tr>";
+
+      echo "</table>";
+
+    } else {
+      echo "<p>Section number $_POST[secNumber] does not exist!</p>";
+    }
+} else {
+echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";
+}
+echo "<a href=\"main.php\">Return</a> to Home Page.";
+
+?>
