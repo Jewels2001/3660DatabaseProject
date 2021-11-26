@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Arena Ticket - Delete Existing Seat</title>
+		<title>Arena Ticket - Delete Existing Seats</title>
 		<link href="properties.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
