@@ -6,7 +6,7 @@
     $conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
     // database is walw3660 pass is eeb5SaiZuw
 
-    $sql = "delete from SEATS where seatID='$_POST[seatID]'";
+    $sql = "delete from SEATS where ID='$_POST[ID]'";
     if($conn->query($sql))
     {
 	    echo "<h3> Seat deleted!</h3>";
@@ -15,7 +15,7 @@
       $errtxt = $conn->error;
       if($err == 1451)
       {
-	      echo "<h3>Cannot delete Seat $_POST[seatID]!</h3>";
+	      echo "<h3>Cannot delete Seat $_POST[ID]!</h3>";
       } else {
 	      echo "you got an error code of $err. $errtxt";
       }
