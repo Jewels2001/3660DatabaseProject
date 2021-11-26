@@ -6,7 +6,7 @@
 	<body>
 		<h2>Delete a Seat</h2>
 		<form action="deleteseat.php" method=post>
-			Seat ID : <input type=text name="seatID" size=30><br><br>
+			Seat ID : <input type=text name="ID" size=30><br><br>
 			<input type=submit name="submit" value="Delete">
 		</form>
 	</body>
