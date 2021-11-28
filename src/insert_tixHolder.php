@@ -25,7 +25,7 @@ if(isset($_COOKIE["username"])){
       echo "Address: <input type=text name=\"address\" size=255> <br><br>";
       echo "Activity Name: <input type=text name=\"activityName\" size=255> <br><br>";
       echo "seat Number: <input type=int name=\"seatNum\" size=255> <br><br>";
-      echo "tixHolder Number: <select name=\"phoneNum\">";
+      echo "tixHolder Number: <select name=\"phoneNum\" size=255> <br><br>";
       
       while($val = $result->fetch_assoc())
       {
