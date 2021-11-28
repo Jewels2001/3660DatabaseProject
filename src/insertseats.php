@@ -10,7 +10,7 @@
       exit;
     }
 
-    $sql = "insert into Seats (number, ID, seat#, type, price) values ('$_POST[number]','$_POST[ID]','$_POST[seat#]','$_POST[type]',
+    $sql = "insert into Seats (number, seatID, type, price) values ('$_POST[number]','$_POST[seatID]','$_POST[type]',
     '$_POST[price]')";
     
     if($conn->query($sql))
@@ -20,7 +20,7 @@
       $err = $conn->errno;
       if($err == 1062)
       {
-        echo "<p>Seat ID $_POST[ID] already exists!</p>";
+        echo "<p>Seat ID $_POST[seatID] already exists!</p>";
       } else {
         echo "<p>MySQL error code $err </p>";
       }
