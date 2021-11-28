@@ -1,7 +1,7 @@
 <html>
 	<head><title>Update Arena ticket</title></head>
 	<body>
-		<h3> Update an Activity: </h3>
+		<h3> Update a Section: </h3>
 		<?php
 		if(isset($_COOKIE["username"])){
 			echo "<form action=\"updatesection2.php\" method=post>";
