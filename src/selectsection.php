@@ -8,7 +8,6 @@
       echo "Connection Issue!";
       exit;
     }
-  //echo "<p>$_POST[Aname]</p>";
     $sql = "select * from SECTION where secNumber='$_POST[secNumber]'";
     $result = $conn->query($sql);
     if($result->num_rows != 0)
