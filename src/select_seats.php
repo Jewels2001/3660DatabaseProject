@@ -15,13 +15,13 @@
 
         $conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
 
-        $sql = "select ID from SEATS";
+        $sql = "select seatID from SEATS";
         $result = $conn->query($sql);
         if($result->num_rows != 0) {
           echo "Seat ID: <select name=\"ID\">";
           while($val = $result->fetch_assoc())
           {
-	           echo "<option value='$val[ID]'>$val[ID]</option>";
+	           echo "<option value='$val[seatID]'>$val[seatID]</option>";
           }
           echo "</select>";
           echo "<input type=submit name=\"submit\" value=\"View\">";
