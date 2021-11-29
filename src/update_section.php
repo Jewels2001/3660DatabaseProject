@@ -16,7 +16,7 @@
       $result = $conn->query($sql);
       if($result->num_rows != 0)
       {
-        echo "Section Numvber: <select name=\"secNumber\">";
+        echo "Section Number: <select name=\"secNumber\">";
 
         while($val = $result->fetch_assoc())
         {
