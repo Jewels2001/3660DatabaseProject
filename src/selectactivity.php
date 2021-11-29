@@ -19,7 +19,7 @@
       echo "<tr>";
       echo "<td>$rec[Aname]</td>";
       echo "<td>$rec[Adate]</td>";
-      echo "<td>$rec[starttime]</td>";
+      echo "<td>$rec[startTime]</td>";
       echo "<td>$rec[length]</td>";
       echo "</tr>";
 

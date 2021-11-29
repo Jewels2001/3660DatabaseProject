@@ -1,5 +1,5 @@
 <html>
-<head><title>Arena Ticket - Add New tixHolder</title></head>
+<head><title>Arena Ticket - Add New Ticket Holder</title></head>
 <body>
 
 
@@ -15,29 +15,26 @@ if(isset($_COOKIE["username"])){
    $conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username);
    
 	
-   $sql = "select phoneNum from TIXHOLDER"; 
+   $sql = "select Aname from ACTIVITY";
    $result = $conn->query($sql);
    if($result->num_rows != 0)
    {
       echo "Phone Number: <input type=text name=\"phoneNum\" size=10> <br><br>";
-      echo "Ticket Holder Name: <input type=text name=\"Pname\" size=255> <br><br>";
-      echo "Date of Birth: <input type=date name=\"dob\" size=255> <br><br>"; 
+      echo "Name: <input type=text name=\"Pname\" size=255> <br><br>";
+      echo "Date of Birth: <input type=date name=\"dob\"> <br><br>"; 
       echo "Address: <input type=text name=\"address\" size=255> <br><br>";
-      echo "Activity Name: <input type=text name=\"activityName\" size=255> <br><br>";
-      echo "seat Number: <input type=int name=\"seatNum\" size=255> <br><br>";
-      echo "tixHolder Number: <select name=\"phoneNum\" size=255> <br><br>";
+      echo "Activity Name: <select name=\"Aname\">";
       
       while($val = $result->fetch_assoc())
       {
-	 echo "<option value='$val[phoneNum]'>$val[phoneNum]</option>"; 
-	 
+	 echo "<option value='$val[Aname]'>$val[Aname]</option>"; 
       }
       echo "</select>"; 
       echo "<input type=submit name=\"submit\" value=\"Add Ticket Holder\">"; 
    }
    else
    {
-      echo "<H3>There are no Ticket Holders in the system! </H3>"; 
+      echo "<H3>There are no Activities in the system! </H3>"; 
    }
    
    echo "</form>";
