@@ -12,10 +12,11 @@ CREATE TABLE SECTION (
 );
 
 CREATE TABLE SEATS (
-  seatID          INT         UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  secNumber       INT         UNSIGNED NOT NULL,
-  seatNumber      INT         UNSIGNED NOT NULL,
-  price           FLOAT       UNSIGNED DEFAULT 0.00,
+  seatID          INT           UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  secNumber       INT           UNSIGNED NOT NULL,
+  seatNumber      INT           UNSIGNED NOT NULL,
+  price           FLOAT         UNSIGNED DEFAULT 0.00,
+  type            VARCHAR(255),
   CONSTRAINT CHK_Seat CHECK (seatNumber >= 1),
   FOREIGN KEY (secNumber) REFERENCES SECTION(secNumber),
 );
