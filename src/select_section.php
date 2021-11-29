@@ -5,10 +5,10 @@
   </head>
 
   <body>
-    <h2>List of Secitons: </h2>
+    <h2>List of Sections: </h2>
     <?php
       if (isset($_COOKIE["username"])) {
-        echo "<form action=\"selectactivity.php\" method=post>";
+        echo "<form action=\"selectsection.php\" method=post>";
 
         $username = $_COOKIE["username"];
         $password = $_COOKIE["password"];
