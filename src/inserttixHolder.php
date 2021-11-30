@@ -8,9 +8,8 @@ if (isset($_COOKIE["username"])) {
     
    if($conn->query($sql)) 
    { 
-      $sql = "insert into TIXHOLDER (phoneNum, Pname, dob, address) values ('$_POST[phoneNum]','$_POST[Pname]','$_POST[dob]','$_POST[address]')";
-      $sql = "select Aname from ACTIVITY where activityName='$_POST[Aname]'";
-      $sql = "select seatID from SEATS where seatID='$_POST[seatID]'";
+      $sql = "insert into TIXHOLDER (phoneNum, Pname, dob, address, activityName, seatID) 
+      values ('$_POST[phoneNum]','$_POST[Pname]','$_POST[dob]','$_POST[address]','$_POST[Aname]','$_POST[seatID]')";
       $conn->query($sql);
       echo "<h3> Ticket Holder added</h3>";
 	

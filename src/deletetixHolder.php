@@ -10,7 +10,7 @@ if (isset($_COOKIE["username"])) {
    $sql = "delete from TIXHOLDER where phoneNum='$_POST[phoneNum]'"; 
    if($conn->query($sql)) 
    { 
-	echo "<h3> CourseTicket Holder deleted!</h3>";
+	echo "<h3> Ticket Holder deleted!</h3>";
 	
    } else {
       $err = $conn->errno; 
