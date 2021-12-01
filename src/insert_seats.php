@@ -1,7 +1,7 @@
 <html>
 <head><title>Arena Ticket - Add New Seat</title></head>
 <body>
-
+<h2>Add a Seat</h2>
 
 
 <?php
@@ -20,21 +20,20 @@ if(isset($_COOKIE["username"])){
    $result = $conn->query($seat);
    if($result->num_rows != 0)
    {
-      echo "Seat ID: <input type=int name=\"seatID\"> <br><br>";
       echo "Seat Number: <input type=int name=\"seatNumber\"> <br><br>";
       echo "Price: <input type=float name=\"price\"> <br><br>"; 
-      echo "Type of Seat: <input type=text name=\"type\" size=255> <br><br>";
+      echo "Type of Seat: <input type=text name=\"type\" size=30> <br><br>";
       echo "Section: <select name=\"secNumber\">";
       while($val = $result->fetch_assoc())
       {
-	 echo "<option value='$val[seatID]'>$val[seatID]</option>"; 
+	 echo "<option value='$val[secNumber]'>$val[secNumber]</option>"; 
       }
       echo "</select><br><br>"; 
       echo "<input type=submit name=\"submit\" value=\"Add Seat\">"; 
    }
    else
    {
-      echo "<H3>There are no Activities in the system! </H3>"; 
+      echo "<H3>There are no Seats in the system! </H3>"; 
    }
    
    echo "</form>";

@@ -4,7 +4,7 @@
 		<h3> Update a seat: </h3>
 		<?php
 		if(isset($_COOKIE["username"])){
-			echo "<form action=\"updateseat2.php\" method=post>";
+			echo "<form action=\"updateseats2.php\" method=post>";
 
 			$username = $_COOKIE["username"];
 			$password = $_COOKIE["password"];
@@ -26,12 +26,19 @@
       if($result->num_rows!= 0)
 			{
 	   		$rec=$result->fetch_assoc();
-	   		echo "Number: <input type=text name=\"number\" value=\"$rec[number]\"><br><br>";
+	   		echo "Number: <input type=text name=\"seatNumber\" value=\"$rec[seatNumber]\"><br><br>";
 	   		echo "SeatID: <input type=text name=\"seatID\" value=\"$rec[seatID]\"><br><br>";
 	   		echo "Type: <input type=text name=\"type\" value=\"$rec[type]\"><br><br>";
      		echo "Price: <input type=text name=\"price\" value=\"$rec[price]\"><br><br>";
-
-	   		echo "<input type=hidden name=\"oldname\" value=\"$_POST[seatID]\">";
+			echo "Section Number: <select name=\"secNumber\">";
+      $sec = "select secNumber from SECTION";
+      $result = $conn->query($sec);
+      while($val = $result->fetch_assoc())
+      {
+	 echo "<option value='$val[secNumber]'>$val[secNumber]</option>"; 
+      }
+	  echo "</select><br><br>";
+	   		echo "<input type=hidden name=\"oldnum\" value=\"$_POST[seatID]\">";
 	   		echo "<input type=submit name=\"submit\" value=\"Update\">";
 			} else {
 				echo "<p>Umm...you may want to enter some data. ;) </p>";

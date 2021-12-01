@@ -1,7 +1,7 @@
 <html>
   <head><title>Update Arena Ticket</title></head>
   <body>
-    <h2> Update Activities: </h2>
+    <h2> Update Ticket Holder: </h2>
     <?php
     if(isset($_COOKIE["username"])) {
 

@@ -18,7 +18,7 @@
         $sql = "select seatID from SEATS";
         $result = $conn->query($sql);
         if($result->num_rows != 0) {
-          echo "Seat ID: <select name=\"ID\">";
+          echo "Seat ID: <select name=\"seatID\">";
           while($val = $result->fetch_assoc())
           {
 	           echo "<option value='$val[seatID]'>$val[seatID]</option>";

@@ -1,7 +1,7 @@
 <html>
 <head><title>Arena Ticket - Add New Ticket Holder</title></head>
 <body>
-
+<h2>Add a Ticket Holder</h2>
 
 
 <?php

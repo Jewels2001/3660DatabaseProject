@@ -16,9 +16,9 @@
       $rec = $result->fetch_assoc();
 
       echo "<tr>";
-      echo "<td>$rec[secNumber]</td>";
-      echo "<td>$rec[secName]</td>";
-      echo "<td>$rec[amountOfSeats]</td>";
+      echo "<td>Section Number: $rec[secNumber]</td>";
+      echo "<td>Section Name: $rec[secName]</td>";
+      echo "<td>Number of seats: $rec[amountOfSeats]</td>";
       echo "</tr>";
 
       echo "</table>";

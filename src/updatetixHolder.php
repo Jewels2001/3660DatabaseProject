@@ -1,5 +1,5 @@
 <html>
-	<head><title>Update Arena ticket</title></head>
+	<head><title>Update ticket Holder</title></head>
 	<body>
 		<h3> Update an Activity: </h3>
 		<?php

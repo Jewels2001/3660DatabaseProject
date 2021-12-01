@@ -1,5 +1,5 @@
 <html>
-  <head><title>Update Arena Seat</title></head>
+  <head><title>Update Arena Ticket</title></head>
   <body>
     <h2> Update Seats: </h2>
     <?php

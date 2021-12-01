@@ -9,13 +9,11 @@
       echo "Connection Issue!";
       exit;
     }
-
-    $sql = "insert into Seats (seatID, seatNumber, price, type, secNumber, secNumber) 
+    $sql = "insert into SEATS (seatID, seatNumber, price, type, secNumber) 
     values ('$_POST[seatID]','$_POST[seatNumber]','$_POST[price]','$_POST[type]','$_POST[secNumber]')";
-    
     if($conn->query($sql))
     {
-      echo "<h3> Seats added!</h3>";
+      echo "<h3> Seat added!</h3>";
     } else {
       $err = $conn->errno;
       if($err == 1062)

@@ -6,11 +6,10 @@ if (isset($_COOKIE["username"])) {
 
    $conn = new mysqli("vconroy.cs.uleth.ca",$username,$password,$username); 
     
+   $sql = "insert into TIXHOLDER (phoneNum, Pname, dob, address, activityName, seatID) 
+   values ('$_POST[phoneNum]','$_POST[Pname]','$_POST[dob]','$_POST[address]','$_POST[Aname]','$_POST[seatID]')";
    if($conn->query($sql)) 
    { 
-      $sql = "insert into TIXHOLDER (phoneNum, Pname, dob, address, activityName, seatID) 
-      values ('$_POST[phoneNum]','$_POST[Pname]','$_POST[dob]','$_POST[address]','$_POST[Aname]','$_POST[seatID]')";
-      $conn->query($sql);
       echo "<h3> Ticket Holder added</h3>";
 	
    }

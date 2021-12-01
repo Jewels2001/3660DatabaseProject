@@ -9,7 +9,7 @@
 			echo "Connection Issue!";
 			exit;
 		}
-		$sql = "update SECTION set secNumber='$_POST[secNumber]',secName='$_POST[secName]',amountOfSeats='$_POST[amountOfSeats]' where secNumber='$_POST[oldnum]'";
+		$sql = "update TIXHOLDER set phoneNum='$_POST[phoneNum]',Pname='$_POST[Pname]',dob='$_POST[dob]',address='$_POST[address]' where phoneNum='$_POST[oldname]'";
 		if($conn->query($sql))
 		{
 			echo "<h3> Ticket Holder updated!</h3>";
@@ -17,7 +17,7 @@
    		$err = $conn->errno();
    		if($err == 1062)
    		{
-      	echo "<p>Section number $_POST[secNum] already exists!</p>";
+      	echo "<p>Section number $_POST[phoneNum] already exists!</p>";
    		} else {
       	echo "error code $err";
    		}

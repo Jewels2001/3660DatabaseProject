@@ -1,7 +1,7 @@
 <html>
 <head><title>Arena Ticket - Delete tixHolder</title></head>
 <body>
-
+<h2>Delete a Ticket Holder</h2>
 
 
 <?php

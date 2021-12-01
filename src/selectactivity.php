@@ -17,10 +17,10 @@
       $rec = $result->fetch_assoc();
 
       echo "<tr>";
-      echo "<td>$rec[Aname]</td>";
-      echo "<td>$rec[Adate]</td>";
-      echo "<td>$rec[startTime]</td>";
-      echo "<td>$rec[length]</td>";
+      echo "<td>Activity Name: $rec[Aname]</td>";
+      echo "<td>Activity Date: $rec[Adate]</td>";
+      echo "<td>Start Time: $rec[startTime]</td>";
+      echo "<td>Length: $rec[length]</td>";
       echo "</tr>";
 
       echo "</table>";

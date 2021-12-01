@@ -8,7 +8,6 @@
       echo "Connection Issue!";
       exit;
     }
-  //echo "<p>$_POST[Aname]</p>";
     $sql = "select * from TIXHOLDER where phoneNum='$_POST[phoneNum]'";
     $result = $conn->query($sql);
     if($result->num_rows != 0)
@@ -17,16 +16,16 @@
       $rec = $result->fetch_assoc();
 
       echo "<tr>";
-      echo "<td>$rec[phoneNum]</td>";
-      echo "<td>$rec[Pname]</td>";
-      echo "<td>$rec[dob]</td>";
-      echo "<td>$rec[address]</td>";
+      echo "<td>Phone Number: $rec[phoneNum]</td>";
+      echo "<td>Name: $rec[Pname]</td>";
+      echo "<td>Date of Birth: $rec[dob]</td>";
+      echo "<td>address: $rec[address]</td>";
       echo "</tr>";
 
       echo "</table>";
 
     } else {
-      echo "<p>Phone Number0 $_POST[phoneNum] does not exist!</p>";
+      echo "<p>Phone Number $_POST[phoneNum] does not exist!</p>";
     }
 } else {
 echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";

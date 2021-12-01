@@ -9,7 +9,7 @@
       exit;
     }
   //echo "<p>$_POST[Aname]</p>";
-    $sql = "select * from SEATS where ID='$_POST[seatID]'";
+    $sql = "select * from SEATS where seatID='$_POST[seatID]'";
     $result = $conn->query($sql);
     if($result->num_rows != 0)
     {
@@ -17,16 +17,17 @@
       $rec = $result->fetch_assoc();
 
       echo "<tr>";
-      echo "<td>$rec[seatID]</td>";
-      echo "<td>$rec[number]</td>";
-      echo "<td>$rec[type]</td>";
-      echo "<td>$rec[price]</td>";
+      echo "<td>Seat ID: $rec[seatID]</td>";
+      echo "<td>Seat Number: $rec[seatNumber]</td>";
+      echo "<td>Seat Type: $rec[type]</td>";
+      echo "<td>Price: $rec[price]</td>";
+      echo "<td>Section Number: $rec[secNumber]</td>";
       echo "</tr>";
 
       echo "</table>";
 
     } else {
-      echo "<p>Activity name $_POST[seatID] does not exist!</p>";
+      echo "<p>Seat $_POST[seatID] does not exist!</p>";
     }
 } else {
 echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";

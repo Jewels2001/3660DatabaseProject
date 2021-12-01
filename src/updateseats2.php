@@ -9,10 +9,10 @@
 			echo "Connection Issue!";
 			exit;
 		}
-		$sql = "update SEATS set seatID='$_POST[seatID]',number='$_POST[number]',type='$_POST[type]',price='$_POST[price]' where seatID='$_POST[seatID]'";
+		$sql = "update SEATS set seatID='$_POST[seatID]',seatNumber='$_POST[seatNumber]',type='$_POST[type]',price='$_POST[price]',secNumber='$_POST[secNumber]' where seatID='$_POST[oldnum]'";
 		if($conn->query($sql))
 		{
-			echo "<h3> Ticket Holder updated!</h3>";
+			echo "<h3> Seat updated!</h3>";
 		} else {
    		$err = $conn->errno();
    		if($err == 1062)

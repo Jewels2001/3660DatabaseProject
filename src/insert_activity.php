@@ -1,5 +1,5 @@
 <html>
-  <head><title>Arenat Ticket - Add New Activity</title></head>
+  <head><title>Arena Ticket - Add New Activity</title></head>
   <body>
     <h2>Add an Activity</h2>
     <form action="insertactivity.php" method=post>
