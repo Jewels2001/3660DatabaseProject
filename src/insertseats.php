@@ -10,8 +10,8 @@
       exit;
     }
 
-    $sql = "insert into Seats (number, seatID, type, price) values ('$_POST[number]','$_POST[seatID]','$_POST[type]',
-    '$_POST[price]')";
+    $sql = "insert into Seats (seatID, seatNumber, price, type, secNumber, secNumber) 
+    values ('$_POST[seatID]','$_POST[seatNumber]','$_POST[price]','$_POST[type]','$_POST[secNumber]')";
     
     if($conn->query($sql))
     {
