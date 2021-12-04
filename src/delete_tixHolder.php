@@ -1,5 +1,7 @@
 <html>
-<head><title>Arena Ticket - Delete tixHolder</title></head>
+<head><title>Arena Ticket - Delete tixHolder</title>
+<link href="properties.css" rel="stylesheet" type="text/css">
+</head>
 <body>
 <h2>Delete a Ticket Holder</h2>
 

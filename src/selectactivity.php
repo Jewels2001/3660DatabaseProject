@@ -1,3 +1,10 @@
+<html>
+<head>
+<link href="properties.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div>
 <?php
   if(isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
@@ -9,20 +16,25 @@
       exit;
     }
   //echo "<p>$_POST[Aname]</p>";
-    $sql = "select * from ACTIVITY where Aname='$_POST[Aname]'";
+    $sql = "select * from ACTIVITY";
     $result = $conn->query($sql);
     if($result->num_rows != 0)
     {
       echo "<table border=1>";
-      $rec = $result->fetch_assoc();
+      echo "<tr>";
+      echo "<th>Activity Name: </th>";
+      echo "<th>Activity Date: </th>";
+      echo "<th>Start Time:  </th>";
+      echo "<th>Length: </th>";
+      while($rec = $result->fetch_assoc()){
 
       echo "<tr>";
-      echo "<td>Activity Name: $rec[Aname]</td>";
-      echo "<td>Activity Date: $rec[Adate]</td>";
-      echo "<td>Start Time: $rec[startTime]</td>";
-      echo "<td>Length: $rec[length]</td>";
+      echo "<td>$rec[Aname]</td>";
+      echo "<td>$rec[Adate]</td>";
+      echo "<td>$rec[startTime]</td>";
+      echo "<td>$rec[length]</td>";
       echo "</tr>";
-
+}
       echo "</table>";
 
     } else {
@@ -34,3 +46,6 @@ echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></
 echo "<a href=\"main.php\">Return</a> to Home Page.";
 
 ?>
+</div>
+</body>
+</html>

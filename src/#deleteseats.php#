@@ -1,4 +1,3 @@
-<html>
 <?php
   if (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
@@ -8,6 +7,8 @@
     // database is walw3660 pass is eeb5SaiZuw
 
     $sql = "delete from SEATS where seatID='$_POST[seatID]'";
+    $tixCheck = $conn->query("select phoneNum from TIXHOLDER where seatID IN (SELECT seatID FROM TIXHOLDER)");
+    
     if($conn->query($sql))
     {
 	    echo "<h3> Seat deleted!</h3>";
@@ -26,4 +27,3 @@
     echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";
   }
 ?>
-</html:

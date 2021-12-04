@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Select Arena Ticket</title>
+<link href="properties.css" rel="stylesheet" type="text/css">
+
   </head>
 
   <body>

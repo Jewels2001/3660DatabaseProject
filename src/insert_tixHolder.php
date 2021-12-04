@@ -1,5 +1,6 @@
 <html>
-<head><title>Arena Ticket - Add New Ticket Holder</title></head>
+<head><title>Arena Ticket - Add New Ticket Holder</title>
+<link href="properties.css" rel="stylesheet" type="text/css"></head>
 <body>
 <h2>Add a Ticket Holder</h2>
 
@@ -31,7 +32,7 @@ if(isset($_COOKIE["username"])){
       }
       echo "</select><br><br>"; 
       echo "Seat ID: <select name=\"seatID\">";
-      $seat = "select seatID from SEATS";
+      $seat = "select seatID from SEATS where seatID NOT IN (SELECT seatID FROM TIXHOLDER)";
       $result = $conn->query($seat);
       while($val = $result->fetch_assoc())
       {

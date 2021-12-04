@@ -2,12 +2,55 @@
 
 body
 {
-	background-color: black;
+    background-color: #292929;
+    color: #f28500;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+html {
+    background-color: #292929;
+    color: #f28500;
+
+}
+
+ul {
+    color: rgb(255, 255, 255);
+    text-align: left;
+padding: 5px;
+margin-right: 10px;
+margin-top: 20px;
+border-style: solid;
+border-color: indianred;
+
+}
+
+form {
+text-align: left;
+padding: 5px;
+margin-right: 10px;
+}
+input[type=button], input[type=submit] {
+    background-color: white;
+    color: indianred;
+    margin: 4px 2px;
+    width: 25%;
+cursor: pointer;
+}
+
+input {
+    width: 50%;
+}
+
+select {
+   padding:5px 15px;
+   background-color: green;
 }
 
 h1
 {
 	color: indianred;
+	text-align: center;
 }
 
 h2

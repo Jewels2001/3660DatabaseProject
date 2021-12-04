@@ -1,3 +1,4 @@
+<html>
 <?php
 	if (isset($_COOKIE["username"])) {
 		$username = $_COOKIE["username"];
@@ -28,3 +29,4 @@
 	}
 //Aname, Adate, length, startTime
 ?>
+</html>
