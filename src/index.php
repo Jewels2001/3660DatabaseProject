@@ -1,4 +1,7 @@
 <html>
+  <head>
+    <link href="properties.css" rel="stylesheet" type="text/css">
+  </head>
   <body>
     <h1>Arena Ticket - Login</h1>
     <form action="setpass.php" method=post>

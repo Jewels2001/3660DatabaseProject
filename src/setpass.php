@@ -1,3 +1,7 @@
+<html>
+<head>
+  <link href="properties.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 // /*we should make sure it's a valid account*/
   $con = new mysqli("vconroy.cs.uleth.ca",$_POST["username"],$_POST["password"]);
@@ -17,3 +21,4 @@ setcookie("password",$password,time()+3600);
 
 header('Location:main.php');
 ?>
+</html>

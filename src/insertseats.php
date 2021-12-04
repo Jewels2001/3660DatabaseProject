@@ -1,3 +1,7 @@
+<html>
+  <head>
+    <link href="properties.css" rel="stylesheet" type="text/css">
+  </head>
 <?php
   if (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
@@ -9,7 +13,7 @@
       echo "Connection Issue!";
       exit;
     }
-    $sql = "insert into SEATS (seatID, seatNumber, price, type, secNumber) 
+    $sql = "insert into SEATS (seatID, seatNumber, price, type, secNumber)
     values ('$_POST[seatID]','$_POST[seatNumber]','$_POST[price]','$_POST[type]','$_POST[secNumber]')";
     if($conn->query($sql))
     {
@@ -28,3 +32,4 @@
     echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";
   }
 ?>
+</html>

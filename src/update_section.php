@@ -1,5 +1,7 @@
 <html>
-  <head><title>Update Arena Ticket</title></head>
+  <head><title>Update Arena Ticket</title>
+    <link href="properties.css" rel="stylesheet" type="text/css">
+  </head>
   <body>
     <h2> Update Sections: </h2>
     <?php

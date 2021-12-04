@@ -1,5 +1,7 @@
 <html>
-	<head><title>Update Arena seat</title></head>
+	<head><title>Update Arena seat</title>
+		<link href="properties.css" rel="stylesheet" type="text/css">
+	</head>
 	<body>
 		<h3> Update a seat: </h3>
 		<?php
@@ -35,7 +37,7 @@
       $result = $conn->query($sec);
       while($val = $result->fetch_assoc())
       {
-	 echo "<option value='$val[secNumber]'>$val[secNumber]</option>"; 
+	 echo "<option value='$val[secNumber]'>$val[secNumber]</option>";
       }
 	  echo "</select><br><br>";
 	   		echo "<input type=hidden name=\"oldnum\" value=\"$_POST[seatID]\">";

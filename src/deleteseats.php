@@ -1,4 +1,7 @@
 <html>
+  <head>
+    <link href="properties.css" rel="stylesheet" type="text/css">
+  </head>
 <?php
   if (isset($_COOKIE["username"])) {
     $username = $_COOKIE["username"];
@@ -26,4 +29,4 @@
     echo "<h3>You are not logged in!</h3><p> <a href=\"index.php\">Login First</a></p>";
   }
 ?>
-</html:
+</html>

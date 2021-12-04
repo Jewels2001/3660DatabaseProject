@@ -1,5 +1,7 @@
 <html>
-  <head><title>Arena Ticket - Add New Section</title></head>
+  <head><title>Arena Ticket - Add New Section</title>
+    <link href="properties.css" rel="stylesheet" type="text/css">
+  </head>
   <body>
     <h2>Add a Section</h2>
     <form action="insertsection.php" method=post>

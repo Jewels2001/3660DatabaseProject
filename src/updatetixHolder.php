@@ -1,5 +1,7 @@
 <html>
-	<head><title>Update ticket Holder</title></head>
+	<head><title>Update ticket Holder</title>
+		<link href="properties.css" rel="stylesheet" type="text/css">
+	</head>
 	<body>
 		<h3> Update an Activity: </h3>
 		<?php

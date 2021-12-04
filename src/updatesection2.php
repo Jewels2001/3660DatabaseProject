@@ -1,3 +1,7 @@
+<html>
+<head>
+	<link href="properties.css" rel="stylesheet" type="text/css">
+</head>
 <?php
 	if (isset($_COOKIE["username"])) {
 		$username = $_COOKIE["username"];
@@ -28,3 +32,4 @@
 	}
 //Aname, Adate, length, startTime
 ?>
+</html>
